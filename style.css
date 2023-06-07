@@ -1,0 +1,427 @@
+/*Custome csscss variables */
+
+/*font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+
+:root {
+
+    /*  ## Colors */
+    /* ### Primary */
+
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+    /* 
+### Accent */
+
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+
+    /* ### Neutral */
+    --Light-Grayish-Blue-op: hsla(240, 75%, 98%, 0.8);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+
+    /*font*/
+    --heading-font: 'Raleway', sans-serif;
+    --bodyfont: 'Open Sans', sans-serif;
+
+}
+
+/* reset */
+/* Box sizing rules  Remove default margin and padding */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    font-family: var(--bodyfont);
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    box-sizing: border-box;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+.container {
+    max-width: calc(100% - 10em);
+    margin: 0 auto;
+    max-width: 1340px;
+    padding: 0px 30px
+}
+
+.header-secction {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fylo-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3em;
+
+}
+
+.fylo-menu ul li a {
+
+    text-decoration: none;
+}
+
+
+
+section {
+    padding: 3.5em 0px;
+}
+
+.fylo-section,
+.fylo-banner-img {
+    flex-basis: 50%;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.fylo-section,
+.fylo-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fylo-section-heading,
+.fylo-info-details-heading {
+    font-family: var(--heading-font);
+    color: var(--Very-Dark-Blue);
+    font-weight: 700;
+    line-height: 1.2em;
+    font-size: clamp(1.5rem, 2.8vw, 4rem);
+}
+
+.w-80 {
+    max-width: 80%;
+}
+
+.fylo-section-para {
+    color: var(--Very-Dark-Blue);
+    font-family: 700;
+    font-size: clamp(0.8rem, 1.3vw, 1.2rem);
+}
+
+.mid-section,
+.fylo-info-section {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.fylo-info::before {
+    content: '';
+    display: block;
+    background-image: url('./images/bg-curve-desktop.svg');
+    position: absolute;
+    top: -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
+}
+
+.fylo-info {
+    margin-top: 15%;
+    position: relative;
+    background-color: var(--Light-Grayish-Blue-op);
+}
+
+
+.fylo-info-details {
+    flex-basis: 60%;
+}
+
+.fylo-info-img {
+
+    flex-basis: 40%;
+}
+
+.alert {
+    color: red;
+    line-height: 0px;
+    font-size: 13px;
+}
+
+.get-started input {
+    width: 350px;
+    padding: 5px;
+}
+
+.get-started button {
+    border: none;
+    padding: 6px 50px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--Bright-Blue);
+    transition: 0.6 all;
+    cursor: pointer;
+}
+
+.get-started button:hover { opacity: 0.9;
+    box-shadow: 0px 0px 5px #3b3b3b8d;
+}
+
+.fylo-work {
+
+    text-decoration: none;
+    max-width: 190px;
+    color: var(--Moderate-Cyan);
+    font-size: 18px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--Moderate-Cyan);
+}
+
+.img-alt {
+    position: relative;
+    top: 4px;
+}
+
+
+.quotes {
+    margin-top: 1.2em;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    margin: 0px 0px 40px 0px;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(193, 193, 193, 0.575);
+}
+
+.quotes-para {
+    font-size: 1em;
+}
+
+.user-meta {
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 10px;
+}
+
+.user-details p:nth-of-type(1) {
+    font-weight: 700;
+}
+
+.user-details p:nth-of-type(2) {
+    font-size: 12px;
+}
+
+
+.get-access {
+
+    background-color: var(--Desaturated-Blue)
+}
+
+.get-access-container {
+    display: grid;
+    grid-auto-columns: 40% 20% 1fr;
+    grid-template-areas: "one . two";
+}
+
+.sub-section {
+    grid-area: one;
+}
+
+.action-section {
+    grid-area: two;
+}
+
+.main-gap {
+    margin-top: 10px;
+}
+
+.sub-alert {
+    color: #fff;
+    margin-top: 11px;
+}
+
+.sub-section {
+    color: #fff;
+}
+
+.sub-section h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.sub-section p {
+    font-size: 16px;
+}
+
+.user-icon {
+    --profile-pic: 40px;
+    width: var(--profile-pic);
+    height: var(--profile-pic);
+    overflow: hidden;
+    border-radius: calc(100px/2);
+}
+
+footer {
+    padding: 4.5em 0px;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.footer-link-div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-link {
+    color: #fff;
+}
+
+.footer-link ul li {
+    margin-bottom: 15px;
+}
+
+.tel-info div img {
+    margin-right: 10px;
+
+}
+
+.tel-info div {
+    margin-bottom: 15px;
+}
+
+.tel-info div span a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--Desaturated-Blue);
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.social-icon span {
+
+    width: 35px;
+    justify-content: center;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: calc(100px/2);
+    transition: 0.6s all;
+    cursor: pointer;
+}
+
+.social-icon span:hover {
+    color: var(--Desaturated-Blue);
+    border: 2px solid var(--Desaturated-Blue);
+}
+
+.attribution {
+    margin-top: 20px;
+    text-align: left !important;
+    color: #fff;
+}
+
+@media (width <=768px) {
+
+
+    .container {
+        max-width: calc(100% - 1em);
+    }
+
+    .fylo-info::before {
+        background-size: contain;
+        top: -57px;
+        background-image: url('./images/bg-curve-mobile.svg');
+    }
+
+    .mid-section,
+    .fylo-info-section {gap: 2em;
+        flex-direction: column-reverse;
+    }
+
+    .get-started button {
+        max-width: 100%;
+    }
+
+    .get-started input {
+        width: 100%;
+    }
+
+    .get-started {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .get-access-container {
+        grid-template-areas: "one "
+            "two";
+        gap: 20px;
+        grid-auto-columns: 1fr;
+    }
+
+    .footer-link-div {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .fylo-menu ul {
+
+        gap: 1em;
+    }
+
+    .fylo-menu ul li a {
+
+        font-size: 12px;
+    }
+}
