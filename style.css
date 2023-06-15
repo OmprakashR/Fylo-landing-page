@@ -250,7 +250,8 @@ img {
 
 .get-access {
 
-    background-color: var(--Desaturated-Blue)
+    background-color: var(--Desaturated-Blue);
+    padding: 6.5em;
 }
 
 .get-access-container {
